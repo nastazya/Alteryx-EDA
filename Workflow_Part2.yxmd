@@ -1,0 +1,2522 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.1">
+  <Nodes>
+    <Node ToolID="157">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1457" y="40.99995" width="889" height="865.0001" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Visualize and Predict</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="134">
+          <GuiSettings>
+            <Position x="1686" y="390.0005" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="CountRecords.yxmc" />
+        </Node>
+        <Node ToolID="135">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1782" y="390.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_83794a3395ac428fa1dd45881bca7d5f_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="137">
+          <GuiSettings Plugin="PlotlyCharting">
+            <Position x="2010" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ChartingFields>
+                <Traces>
+                  <type>scatter</type>
+                  <mode>lines</mode>
+                  <xsrc>Date</xsrc>
+                  <ysrc>Confirmed</ysrc>
+                  <name>Total number of confirmed cases</name>
+                </Traces>
+                <Traces>
+                  <type>scatter</type>
+                  <mode>lines</mode>
+                  <xsrc>Date</xsrc>
+                  <ysrc>Dead</ysrc>
+                  <name>Total number of deaths</name>
+                </Traces>
+                <Traces>
+                  <type>scatter</type>
+                  <mode>lines</mode>
+                  <name>Total number of recovered</name>
+                  <xsrc>Date</xsrc>
+                  <ysrc>Recovered</ysrc>
+                </Traces>
+                <Layout>
+                  <title>
+                    <text>COVID-19 Dynamics in Canada</text>
+                  </title>
+                  <font>
+                    <family>sans-serif</family>
+                  </font>
+                  <autosize>false</autosize>
+                  <width>1000</width>
+                  <height>700</height>
+                  <showlegend>true</showlegend>
+                  <hovermode>closest</hovermode>
+                  <xaxis>
+                    <range>2020-01-22</range>
+                    <range>2020-05-17</range>
+                    <autorange>true</autorange>
+                    <title>
+                      <text>Date</text>
+                    </title>
+                    <tickfont>
+                      <size>12</size>
+                    </tickfont>
+                    <nticks>0</nticks>
+                    <showgrid>true</showgrid>
+                    <type>date</type>
+                    <showspikes>false</showspikes>
+                  </xaxis>
+                  <yaxis>
+                    <range>-4351.7777777777783</range>
+                    <range>82683.777777777781</range>
+                    <autorange>true</autorange>
+                    <title>
+                      <text>Number of patients</text>
+                    </title>
+                    <type>linear</type>
+                    <showspikes>false</showspikes>
+                  </yaxis>
+                  <margin>
+                    <pad>0</pad>
+                    <t>100</t>
+                    <b>80</b>
+                    <l>80</l>
+                    <r>80</r>
+                  </margin>
+                  <dragmode>zoom</dragmode>
+                  <legend>
+                    <font>
+                      <size>12</size>
+                    </font>
+                    <borderwidth>0</borderwidth>
+                  </legend>
+                </Layout>
+              </ChartingFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Total cases</AnnotationText>
+              <DefaultAnnotationText><![CDATA[Total ]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+        </Node>
+        <Node ToolID="138">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1482" y="209.9994" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Country/Region</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-05-21 21:08:48</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>Canada</Operand>
+                  <StartDate>2020-05-21 21:08:48</StartDate>
+                  <EndDate>2020-05-21 21:08:48</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Country/Region] = "Canada"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="139">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2094" y="270.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_75e5b31ac8134273ad353519137fe5b8_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="140">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1686" y="330.0002" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_eca044a4b9654c2aad0b6aeab5cae466_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="141">
+          <GuiSettings>
+            <Position x="2094" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Select Fields">Date=False,Country/Region=False,Confirmed=False,Dead=False,Recovered=False,Daily_Confirmed=False,Daily_Deaths=False,Daily_Recovered=False,Now_SickConfirmed=True</Value>
+              <Value name="Sample Data">False</Value>
+              <Value name="Number">True</Value>
+              <Value name="NNumber">5000</Value>
+              <Value name="Percent">False</Value>
+              <Value name="NPercent">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Field_Summary_Report.yxmc" />
+        </Node>
+        <Node ToolID="142">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2262" y="450" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_e141bc8de1df4152b0afba5937af8bfa_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="143">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2262" y="546" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_f3e6206685444db9ab78926e8b39923d_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="144">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2262" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_e5ea1c9002064f838bdde84fa6763bea_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="145">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="1602" y="593.9998" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RecordID</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="146">
+          <GuiSettings>
+            <Position x="1830" y="546" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="mod_name">Arima-1</Value>
+              <Value name="target_field">Now_SickConfirmed</Value>
+              <Value name="use_covar">False</Value>
+              <Value name="covars">"RecordID"</Value>
+              <Value name="use_covar_mean">True</Value>
+              <Value name="use_covar_diff">False</Value>
+              <Value name="freq_hourly">False</Value>
+              <Value name="freq_daily">True</Value>
+              <Value name="freq_weekdays">False</Value>
+              <Value name="freq_weekly">False</Value>
+              <Value name="freq_monthly">False</Value>
+              <Value name="freq_quarterly">False</Value>
+              <Value name="freq_annually">False</Value>
+              <Value name="freq_other">False</Value>
+              <Value name="custom_auto">False</Value>
+              <Value name="first_dif">False</Value>
+              <Value name="level_first_dif">0</Value>
+              <Value name="max_p">2</Value>
+              <Value name="max_q">2</Value>
+              <Value name="seas_dif">False</Value>
+              <Value name="level_seas_dif">0</Value>
+              <Value name="s_max_P">1</Value>
+              <Value name="s_max_Q">1</Value>
+              <Value name="ic_aic">False</Value>
+              <Value name="ic_aicc">True</Value>
+              <Value name="ic_bic">False</Value>
+              <Value name="full_enum">False</Value>
+              <Value name="max_order">5</Value>
+              <Value name="m_core">False</Value>
+              <Value name="drift">True</Value>
+              <Value name="box_cox">False</Value>
+              <Value name="lambda">0.00</Value>
+              <Value name="full_custom">False</Value>
+              <Value name="p">0</Value>
+              <Value name="d">0</Value>
+              <Value name="q">0</Value>
+              <Value name="S_P">0</Value>
+              <Value name="S_D">0</Value>
+              <Value name="S_Q">0</Value>
+              <Value name="m_drift">False</Value>
+              <Value name="m_box_cox">False</Value>
+              <Value name="m_lambda">0.00</Value>
+              <Value name="series_start">False</Value>
+              <Value name="start_year">1980</Value>
+              <Value name="start_month_qtr">1</Value>
+              <Value name="forecast_periods">17</Value>
+              <Value name="alteryx.week.US">True</Value>
+              <Value name="alteryx.week.UK">False</Value>
+              <Value name="alteryx.week.ISO8601">False</Value>
+              <Value name="inches">True</Value>
+              <Value name="in.w">5.00</Value>
+              <Value name="in.h">5.50</Value>
+              <Value name="centimeters">False</Value>
+              <Value name="cm.w">13.00</Value>
+              <Value name="cm.h">14.95</Value>
+              <Value name="graph.resolution">1x</Value>
+              <Value name="pointsize">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>ARIMA</AnnotationText>
+              <DefaultAnnotationText>ARIMA</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\ARIMA.yxmc" />
+        </Node>
+        <Node ToolID="148">
+          <GuiSettings>
+            <Position x="1830" y="654.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="mod_name">ETS-1</Value>
+              <Value name="target_field">Now_SickConfirmed</Value>
+              <Value name="freq_hourly">False</Value>
+              <Value name="freq_daily">True</Value>
+              <Value name="freq_weekdays">False</Value>
+              <Value name="freq_weekly">False</Value>
+              <Value name="freq_monthly">False</Value>
+              <Value name="freq_quarterly">False</Value>
+              <Value name="freq_annually">False</Value>
+              <Value name="freq_other">False</Value>
+              <Value name="error_auto">True</Value>
+              <Value name="error_add">False</Value>
+              <Value name="error_mult">False</Value>
+              <Value name="trend_type_auto">True</Value>
+              <Value name="trend_type_add">False</Value>
+              <Value name="trend_type_mult">False</Value>
+              <Value name="trend_type_none">False</Value>
+              <Value name="trend_damp_auto">True</Value>
+              <Value name="trend_damp_yes">False</Value>
+              <Value name="trend_damp_no">False</Value>
+              <Value name="seas_auto">True</Value>
+              <Value name="seas_add">False</Value>
+              <Value name="seas_mult">False</Value>
+              <Value name="seas_none">False</Value>
+              <Value name="ic_auto">True</Value>
+              <Value name="ic_aic">False</Value>
+              <Value name="ic_aicc">False</Value>
+              <Value name="ic_bic">False</Value>
+              <Value name="box_cox">False</Value>
+              <Value name="lambda">0.00</Value>
+              <Value name="series_start">False</Value>
+              <Value name="start_year">2012</Value>
+              <Value name="start_month_qtr">1</Value>
+              <Value name="forecast_periods">17</Value>
+              <Value name="alteryx.week.US">True</Value>
+              <Value name="alteryx.week.UK">False</Value>
+              <Value name="alteryx.week.ISO8601">False</Value>
+              <Value name="inches">True</Value>
+              <Value name="in.w">5.50</Value>
+              <Value name="in.h">5.50</Value>
+              <Value name="centimeters">False</Value>
+              <Value name="cm.w">13.00</Value>
+              <Value name="cm.h">14.95</Value>
+              <Value name="graph.resolution">1x</Value>
+              <Value name="pointsize">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>ETS</AnnotationText>
+              <DefaultAnnotationText>ETA</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\ETS.yxmc" />
+        </Node>
+        <Node ToolID="150">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1686" y="594.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>&lt;=</Operator>
+                <Field>RecordID</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-05-21 23:53:00</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2020-05-21 23:53:00</StartDate>
+                  <EndDate>2020-05-21 23:53:00</EndDate>
+                  <Operand>100</Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[RecordID] &lt;= 100</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="151">
+          <GuiSettings>
+            <Position x="2154" y="666.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="inches">True</Value>
+              <Value name="in.w">5.50</Value>
+              <Value name="in.h">5.50</Value>
+              <Value name="centimeters">False</Value>
+              <Value name="cm.w">13.00</Value>
+              <Value name="cm.h">14.95</Value>
+              <Value name="graph.resolution">1x</Value>
+              <Value name="pointsize">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Compering the models</AnnotationText>
+              <DefaultAnnotationText>Compering the models</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\TS_Compare.yxmc" />
+        </Node>
+        <Node ToolID="152">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="1998" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="153">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2262" y="618" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_12341d2ec1d1455c8bc82f25a7f2dc07_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="154">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2262" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_f51a8f73a5c949999affda900943d973_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="165">
+          <GuiSettings Plugin="PlotlyCharting">
+            <Position x="2010" y="197.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ChartingFields>
+                <Traces>
+                  <type>scatter</type>
+                  <mode>lines</mode>
+                  <xsrc>Date</xsrc>
+                  <ysrc>Daily_Confirmed</ysrc>
+                  <name>Dailyl number of confirmed cases</name>
+                  <line>
+                    <width>2</width>
+                  </line>
+                </Traces>
+                <Traces>
+                  <type>scatter</type>
+                  <mode>lines</mode>
+                  <xsrc>Date</xsrc>
+                  <ysrc>Daily_Deaths</ysrc>
+                  <name>Daily number of deaths</name>
+                  <line>
+                    <width>2</width>
+                  </line>
+                </Traces>
+                <Traces>
+                  <type>scatter</type>
+                  <mode>lines</mode>
+                  <name>Daily number of recovered</name>
+                  <xsrc>Date</xsrc>
+                  <ysrc>Daily_Recovered</ysrc>
+                  <aggregationField>ysrc</aggregationField>
+                  <aggregationFunction>mean</aggregationFunction>
+                  <aggregationFieldName>Daily_Recovered</aggregationFieldName>
+                  <line>
+                    <width>2</width>
+                  </line>
+                </Traces>
+                <Layout>
+                  <title>
+                    <text>COVID-19 Dynamics in Canada</text>
+                  </title>
+                  <font>
+                    <family>sans-serif</family>
+                  </font>
+                  <autosize>false</autosize>
+                  <width>1000</width>
+                  <height>700</height>
+                  <showlegend>true</showlegend>
+                  <hovermode>closest</hovermode>
+                  <xaxis>
+                    <range>2020-01-22</range>
+                    <range>2020-05-17</range>
+                    <autorange>true</autorange>
+                    <title>
+                      <text>Date</text>
+                    </title>
+                    <tickfont>
+                      <size>12</size>
+                    </tickfont>
+                    <nticks>0</nticks>
+                    <showgrid>true</showgrid>
+                    <showspikes>false</showspikes>
+                    <type>date</type>
+                  </xaxis>
+                  <yaxis>
+                    <range>-437.22222222222223</range>
+                    <range>2947.2222222222222</range>
+                    <autorange>true</autorange>
+                    <title>
+                      <text>Number of patients</text>
+                    </title>
+                    <showspikes>false</showspikes>
+                    <type>linear</type>
+                  </yaxis>
+                  <margin>
+                    <pad>0</pad>
+                    <t>100</t>
+                    <b>80</b>
+                    <l>80</l>
+                    <r>80</r>
+                  </margin>
+                  <dragmode>zoom</dragmode>
+                  <legend>
+                    <font>
+                      <size>12</size>
+                    </font>
+                    <borderwidth>0</borderwidth>
+                  </legend>
+                </Layout>
+              </ChartingFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>New cases</AnnotationText>
+              <DefaultAnnotationText>Daily</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+        </Node>
+        <Node ToolID="166">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2094" y="198.0007" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_efd559e9e20b4086adc0d29c45a6bf3e_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="170">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Tile.Tile">
+            <Position x="1578" y="126.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Method>EqualRecords</Method>
+              <EqualRecords>
+                <NumTiles value="20" />
+              </EqualRecords>
+              <GroupFields orderChanged="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[Group all the data into 20 tiles
+]]></AnnotationText>
+              <DefaultAnnotationText><![CDATA[Group all the data into 20 tiles]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTile" />
+        </Node>
+        <Node ToolID="171">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1722" y="162.0002" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_9688a9db1a0f463594b0cbcc66cfce89_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="172">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1722" y="90.00019" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Tile_Num" action="GroupBy" rename="Tile_Num" />
+                <SummarizeField field="Date" action="First" rename="First_Date" />
+                <SummarizeField field="Daily_Confirmed" action="Avg" rename="Avg_Daily_Confirmed" />
+                <SummarizeField field="Daily_Deaths" action="Avg" rename="Avg_Daily_Deaths" />
+                <SummarizeField field="Daily_Recovered" action="Avg" rename="Avg_Daily_Recovered" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Group by Tile</AnnotationText>
+              <DefaultAnnotationText>Group by Tile</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="173">
+          <GuiSettings Plugin="PlotlyCharting">
+            <Position x="2010" y="89.99998" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ChartingFields>
+                <Traces>
+                  <type>scatter</type>
+                  <mode>lines</mode>
+                  <xsrc>First_Date</xsrc>
+                  <ysrc>Avg_Daily_Confirmed</ysrc>
+                  <name>Daily number of confirmed grouped</name>
+                  <line>
+                    <width>2</width>
+                  </line>
+                </Traces>
+                <Traces>
+                  <type>scatter</type>
+                  <mode>lines</mode>
+                  <xsrc>First_Date</xsrc>
+                  <ysrc>Avg_Daily_Deaths</ysrc>
+                  <name>Daily number of deaths grouped</name>
+                  <line>
+                    <width>2</width>
+                  </line>
+                </Traces>
+                <Traces>
+                  <type>scatter</type>
+                  <mode>lines</mode>
+                  <name>Daily number of recovered grouped</name>
+                  <xsrc>First_Date</xsrc>
+                  <ysrc>Avg_Daily_Recovered</ysrc>
+                  <line>
+                    <width>2</width>
+                  </line>
+                </Traces>
+                <Layout>
+                  <title>
+                    <text>COVID-19 Dynamics in Canada</text>
+                  </title>
+                  <font>
+                    <family>sans-serif</family>
+                  </font>
+                  <autosize>false</autosize>
+                  <width>1000</width>
+                  <height>700</height>
+                  <showlegend>true</showlegend>
+                  <hovermode>closest</hovermode>
+                  <xaxis>
+                    <range>2020-01-22</range>
+                    <range>2020-05-13</range>
+                    <autorange>true</autorange>
+                    <title>
+                      <text>Date</text>
+                    </title>
+                    <tickfont>
+                      <size>12</size>
+                    </tickfont>
+                    <nticks>0</nticks>
+                    <showgrid>true</showgrid>
+                    <showspikes>false</showspikes>
+                    <type>date</type>
+                  </xaxis>
+                  <yaxis>
+                    <range>-26.287037037037038</range>
+                    <range>499.4537037037037</range>
+                    <autorange>true</autorange>
+                    <title>
+                      <text>Number of patients</text>
+                    </title>
+                    <showspikes>false</showspikes>
+                    <type>linear</type>
+                  </yaxis>
+                  <margin>
+                    <pad>0</pad>
+                    <t>100</t>
+                    <b>80</b>
+                    <l>80</l>
+                    <r>80</r>
+                  </margin>
+                  <dragmode>zoom</dragmode>
+                  <legend>
+                    <font>
+                      <size>12</size>
+                    </font>
+                    <borderwidth>0</borderwidth>
+                  </legend>
+                </Layout>
+              </ChartingFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>New cases grouped</AnnotationText>
+              <DefaultAnnotationText>Daily grouped by average</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+        </Node>
+        <Node ToolID="174">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2094" y="89.99995" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_4b96862cffc7405f8be20fe9e3404092_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="175">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1866" y="90.00003" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Avg_Daily_Confirmed" selected="True" type="Int16" size="2" />
+                <SelectField field="Avg_Daily_Deaths" selected="True" type="Int16" size="2" />
+                <SelectField field="Avg_Daily_Recovered" selected="True" type="Int16" size="2" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>To Int</AnnotationText>
+              <DefaultAnnotationText>To Int</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="176">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1710" y="522.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_701ef2e2b7834ce6a15a2b4b81227a7a_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="185">
+          <GuiSettings Plugin="PlotlyCharting">
+            <Position x="2010" y="353.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ChartingFields>
+                <Traces>
+                  <type>scatter</type>
+                  <mode>lines</mode>
+                  <xsrc>Date</xsrc>
+                  <ysrc>Confirmed</ysrc>
+                  <name>Total confirmed</name>
+                  <line>
+                    <width>2</width>
+                  </line>
+                  <traceIndex>0</traceIndex>
+                  <fill>tonexty</fill>
+                  <marker>
+                    <size>6</size>
+                    <line>
+                      <width>0</width>
+                    </line>
+                  </marker>
+                </Traces>
+                <Traces>
+                  <type>scatter</type>
+                  <mode>lines</mode>
+                  <xsrc>Date</xsrc>
+                  <ysrc>Now_SickConfirmed</ysrc>
+                  <stackgroup>1</stackgroup>
+                  <name>Currently sick</name>
+                </Traces>
+                <Layout>
+                  <title>
+                    <text>Canada currently sick people</text>
+                  </title>
+                  <font>
+                    <family>sans-serif</family>
+                    <size>12</size>
+                  </font>
+                  <autosize>false</autosize>
+                  <width>900</width>
+                  <height>849</height>
+                  <showlegend>true</showlegend>
+                  <hovermode>closest</hovermode>
+                  <xaxis>
+                    <range>2020-03-10 12:00</range>
+                    <range>2020-05-17 12:00</range>
+                    <autorange>false</autorange>
+                    <title>
+                      <text>Date</text>
+                    </title>
+                    <tickfont>
+                      <size>12</size>
+                    </tickfont>
+                    <nticks>0</nticks>
+                    <showline>false</showline>
+                    <showgrid>false</showgrid>
+                    <rangeselector>
+                      <visible>false</visible>
+                      <font>
+                        <size>12</size>
+                      </font>
+                      <borderwidth>0</borderwidth>
+                      <x>0</x>
+                      <y>1.02</y>
+                    </rangeselector>
+                    <type>date</type>
+                  </xaxis>
+                  <yaxis>
+                    <range>0</range>
+                    <range>82454.736842105267</range>
+                    <autorange>true</autorange>
+                    <title>
+                      <text>Value</text>
+                    </title>
+                    <type>linear</type>
+                  </yaxis>
+                  <margin>
+                    <pad>0</pad>
+                    <t>100</t>
+                    <b>80</b>
+                    <l>80</l>
+                    <r>80</r>
+                  </margin>
+                  <barmode>stack</barmode>
+                  <bargap>0.18000000000000005</bargap>
+                  <legend>
+                    <font>
+                      <size>12</size>
+                    </font>
+                    <borderwidth>0</borderwidth>
+                    <traceorder>reversed</traceorder>
+                  </legend>
+                </Layout>
+              </ChartingFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Currently ill</AnnotationText>
+              <DefaultAnnotationText>Currently ill</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+        </Node>
+        <Node ToolID="186">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="2094" y="354" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_0246474b56a645768a4c96054d524bb6_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="187">
+          <GuiSettings>
+            <Position x="1602" y="798.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="mod_name">ETS</Value>
+              <Value name="target_field">Now_SickConfirmed</Value>
+              <Value name="freq_hourly">False</Value>
+              <Value name="freq_daily">True</Value>
+              <Value name="freq_weekdays">False</Value>
+              <Value name="freq_weekly">False</Value>
+              <Value name="freq_monthly">False</Value>
+              <Value name="freq_quarterly">False</Value>
+              <Value name="freq_annually">False</Value>
+              <Value name="freq_other">False</Value>
+              <Value name="error_auto">True</Value>
+              <Value name="error_add">False</Value>
+              <Value name="error_mult">False</Value>
+              <Value name="trend_type_auto">True</Value>
+              <Value name="trend_type_add">False</Value>
+              <Value name="trend_type_mult">False</Value>
+              <Value name="trend_type_none">False</Value>
+              <Value name="trend_damp_auto">True</Value>
+              <Value name="trend_damp_yes">False</Value>
+              <Value name="trend_damp_no">False</Value>
+              <Value name="seas_auto">True</Value>
+              <Value name="seas_add">False</Value>
+              <Value name="seas_mult">False</Value>
+              <Value name="seas_none">False</Value>
+              <Value name="ic_auto">True</Value>
+              <Value name="ic_aic">False</Value>
+              <Value name="ic_aicc">False</Value>
+              <Value name="ic_bic">False</Value>
+              <Value name="box_cox">False</Value>
+              <Value name="lambda">0.00</Value>
+              <Value name="series_start">False</Value>
+              <Value name="start_year">2012</Value>
+              <Value name="start_month_qtr">1</Value>
+              <Value name="forecast_periods">60</Value>
+              <Value name="alteryx.week.US">True</Value>
+              <Value name="alteryx.week.UK">False</Value>
+              <Value name="alteryx.week.ISO8601">False</Value>
+              <Value name="inches">True</Value>
+              <Value name="in.w">5.50</Value>
+              <Value name="in.h">5.50</Value>
+              <Value name="centimeters">False</Value>
+              <Value name="cm.w">13.00</Value>
+              <Value name="cm.h">14.95</Value>
+              <Value name="graph.resolution">1x</Value>
+              <Value name="pointsize">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>ETS</AnnotationText>
+              <DefaultAnnotationText>ETS</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\ETS.yxmc" />
+        </Node>
+        <Node ToolID="188">
+          <GuiSettings>
+            <Position x="1746" y="786" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="forecast">forecast</Value>
+              <Value name="large_conf">95</Value>
+              <Value name="small_conf">80</Value>
+              <Value name="horizon">60</Value>
+              <Value name="inches">True</Value>
+              <Value name="in.w">5.50</Value>
+              <Value name="in.h">5.50</Value>
+              <Value name="centimeters">False</Value>
+              <Value name="cm.w">13.00</Value>
+              <Value name="cm.h">14.95</Value>
+              <Value name="graph.resolution">1x</Value>
+              <Value name="pointsize">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>TS Forecast</AnnotationText>
+              <DefaultAnnotationText>TS Forecast</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Period" source="R-DATA:" type="Double" />
+                <Field name="Sub_Period" source="R-DATA:" type="Int32" />
+                <Field name="forecast" source="R-DATA:" type="Double" />
+                <Field name="forecast_high_95" source="R-DATA:" type="Double" />
+                <Field name="forecast_high_80" source="R-DATA:" type="Double" />
+                <Field name="forecast_low_80" source="R-DATA:" type="Double" />
+                <Field name="forecast_low_95" source="R-DATA:" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Interactive Viz">
+              <RecordInfo>
+                <Field name="Text" size="2147483647" source="Report:Text:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="Report">
+              <RecordInfo>
+                <Field name="Report" size="1073741823" source="Report: (Multiple Sources)" type="V_WString" />
+                <Field name="Desc" size="64" source="Formula: (Multiple Sources)" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\TS_Forecast.yxmc" />
+        </Node>
+        <Node ToolID="189">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1878" y="750" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_ef60de8b809647f4931d89a0773ec3e1_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="190">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1878" y="822" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_003431de60ac4177b9f67c780a72864d_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="156">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="0" y="40.99998" width="1422" height="624" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Connect and View</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="100">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="25.00001" y="150.0003" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_confirmed_global_narrow.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>time_series_covid19_confirmed_global_narrow.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Province/State" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_confirmed_global_narrow.csv" type="V_String" />
+                <Field name="Country/Region" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_confirmed_global_narrow.csv" type="V_String" />
+                <Field name="Lat" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_confirmed_global_narrow.csv" type="V_String" />
+                <Field name="Long" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_confirmed_global_narrow.csv" type="V_String" />
+                <Field name="Date" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_confirmed_global_narrow.csv" type="V_String" />
+                <Field name="Value" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_confirmed_global_narrow.csv" type="V_String" />
+                <Field name="ISO 3166-1 Alpha 3-Codes" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_confirmed_global_narrow.csv" type="V_String" />
+                <Field name="Region Code" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_confirmed_global_narrow.csv" type="V_String" />
+                <Field name="Sub-region Code" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_confirmed_global_narrow.csv" type="V_String" />
+                <Field name="Intermediate Region Code" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_confirmed_global_narrow.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="101">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="330" y="90.00005" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_cdd20a5b33ce4de5a064ebd6ef089441_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="102">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="145.0001" y="150.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RecordID</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="103">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="228.9999" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>&gt;</Operator>
+                <Field>RecordID</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-05-18 19:15:12</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>1</Operand>
+                  <StartDate>2020-05-18 19:15:12</StartDate>
+                  <EndDate>2020-05-18 19:15:12</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[RecordID] &gt; 1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="104">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="397.0002" y="137.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Country/Region" selected="True" />
+                <SelectField field="Date" selected="True" type="Date" size="10" />
+                <SelectField field="Intermediate Region Code" selected="False" />
+                <SelectField field="ISO 3166-1 Alpha 3-Codes" selected="False" />
+                <SelectField field="Lat" selected="True" type="Double" size="8" />
+                <SelectField field="Long" selected="True" type="Double" size="8" />
+                <SelectField field="Province/State" selected="True" />
+                <SelectField field="RecordID" selected="True" />
+                <SelectField field="Region Code" selected="False" />
+                <SelectField field="Sub-region Code" selected="False" />
+                <SelectField field="Value" selected="True" type="Int64" size="8" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="106">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="565.0001" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Date" action="GroupBy" rename="Date" />
+                <SummarizeField field="Country/Region" action="GroupBy" rename="Country/Region" />
+                <SummarizeField field="Value" action="Sum" rename="Sum_Value" />
+                <SummarizeField field="Lat" action="First" rename="First_Lat" />
+                <SummarizeField field="Long" action="First" rename="First_Long" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="113">
+          <GuiSettings>
+            <Position x="480.9998" y="102.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="CountRecords.yxmc" />
+        </Node>
+        <Node ToolID="114">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="121.0001" y="89.99998" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_29ca3c50667a42efb11096ee27c3421f_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="115">
+          <GuiSettings>
+            <Position x="493.0001" y="293.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="CountRecords.yxmc" />
+        </Node>
+        <Node ToolID="116">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="133" y="282.0002" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_6135ee0951cb4c52b35d8e9d6d876f31_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="117">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="37.00002" y="342.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_deaths_global_narrow.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>time_series_covid19_deaths_global_narrow.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Province/State" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_deaths_global_narrow.csv" type="V_String" />
+                <Field name="Country/Region" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_deaths_global_narrow.csv" type="V_String" />
+                <Field name="Lat" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_deaths_global_narrow.csv" type="V_String" />
+                <Field name="Long" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_deaths_global_narrow.csv" type="V_String" />
+                <Field name="Date" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_deaths_global_narrow.csv" type="V_String" />
+                <Field name="Value" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_deaths_global_narrow.csv" type="V_String" />
+                <Field name="ISO 3166-1 Alpha 3-Codes" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_deaths_global_narrow.csv" type="V_String" />
+                <Field name="Region Code" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_deaths_global_narrow.csv" type="V_String" />
+                <Field name="Sub-region Code" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_deaths_global_narrow.csv" type="V_String" />
+                <Field name="Intermediate Region Code" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_deaths_global_narrow.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="118">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="342" y="282.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_f9a350b1b3bf401ebcd0194dd6a3bf67_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="119">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="157" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RecordID</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="120">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="241" y="342.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>&gt;</Operator>
+                <Field>RecordID</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-05-18 19:15:12</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>1</Operand>
+                  <StartDate>2020-05-18 19:15:12</StartDate>
+                  <EndDate>2020-05-18 19:15:12</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[RecordID] &gt; 1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="121">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="409" y="329.9997" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Country/Region" selected="True" />
+                <SelectField field="Date" selected="True" type="Date" size="10" />
+                <SelectField field="Intermediate Region Code" selected="False" />
+                <SelectField field="ISO 3166-1 Alpha 3-Codes" selected="False" />
+                <SelectField field="Lat" selected="True" type="Double" size="8" />
+                <SelectField field="Long" selected="True" type="Double" size="8" />
+                <SelectField field="Province/State" selected="True" />
+                <SelectField field="RecordID" selected="True" />
+                <SelectField field="Region Code" selected="False" />
+                <SelectField field="Sub-region Code" selected="False" />
+                <SelectField field="Value" selected="True" type="Int64" size="8" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="123">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="565.0001" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Date" action="GroupBy" rename="Date" />
+                <SummarizeField field="Country/Region" action="GroupBy" rename="Country/Region" />
+                <SummarizeField field="Value" action="Sum" rename="Sum_Value" />
+                <SummarizeField field="Lat" action="First" rename="First_Lat" />
+                <SummarizeField field="Long" action="First" rename="First_Long" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="124">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="37.00002" y="534.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_recovered_global_narrow.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>time_series_covid19_recovered_global_narrow.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Province/State" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_recovered_global_narrow.csv" type="V_String" />
+                <Field name="Country/Region" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_recovered_global_narrow.csv" type="V_String" />
+                <Field name="Lat" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_recovered_global_narrow.csv" type="V_String" />
+                <Field name="Long" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_recovered_global_narrow.csv" type="V_String" />
+                <Field name="Date" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_recovered_global_narrow.csv" type="V_String" />
+                <Field name="Value" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_recovered_global_narrow.csv" type="V_String" />
+                <Field name="ISO 3166-1 Alpha 3-Codes" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_recovered_global_narrow.csv" type="V_String" />
+                <Field name="Region Code" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_recovered_global_narrow.csv" type="V_String" />
+                <Field name="Sub-region Code" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_recovered_global_narrow.csv" type="V_String" />
+                <Field name="Intermediate Region Code" size="254" source="File: C:\Users\nasta\BIG_DATA\CEBD-1150\Alteryx Assignment\time_series_covid19_recovered_global_narrow.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="125">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="157.0001" y="534.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RecordID</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="126">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="240.9999" y="534" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>&gt;</Operator>
+                <Field>RecordID</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-05-18 19:15:12</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>1</Operand>
+                  <StartDate>2020-05-18 19:15:12</StartDate>
+                  <EndDate>2020-05-18 19:15:12</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[RecordID] &gt; 1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="127">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="133" y="473.9998" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_d386426718694ec49ebb9968aca6d747_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="128">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="329.9999" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_3765c97352eb45ee86c7bf50fba8fa99_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="129">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="397" y="522" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Country/Region" selected="True" />
+                <SelectField field="Date" selected="True" type="Date" size="10" />
+                <SelectField field="Intermediate Region Code" selected="False" />
+                <SelectField field="ISO 3166-1 Alpha 3-Codes" selected="False" />
+                <SelectField field="Lat" selected="True" type="Double" size="8" />
+                <SelectField field="Long" selected="True" type="Double" size="8" />
+                <SelectField field="Province/State" selected="True" />
+                <SelectField field="RecordID" selected="True" />
+                <SelectField field="Region Code" selected="False" />
+                <SelectField field="Sub-region Code" selected="False" />
+                <SelectField field="Value" selected="True" type="Int64" size="8" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Select fields that we will use</AnnotationText>
+              <DefaultAnnotationText>Select fields that we will use</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="131">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="570" y="522" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Date" action="GroupBy" rename="Date" />
+                <SummarizeField field="Country/Region" action="GroupBy" rename="Country/Region" />
+                <SummarizeField field="Value" action="Sum" rename="Sum_Value" />
+                <SummarizeField field="Lat" action="First" rename="First_Lat" />
+                <SummarizeField field="Long" action="First" rename="First_Long" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Group by Date and Country</AnnotationText>
+              <DefaultAnnotationText>Group by Date and Country</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="132">
+          <GuiSettings>
+            <Position x="486" y="486" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="CountRecords.yxmc" />
+        </Node>
+        <Node ToolID="133">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+            <Position x="798" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <JoinByRecPos value="False" />
+              <JoinFields>
+                <JoinInfo connection="#1">
+                  <Field field="Country/Region" />
+                  <Field field="Date" />
+                </JoinInfo>
+                <JoinInfo connection="#2">
+                  <Field field="Country/Region" />
+                  <Field field="Date" />
+                </JoinInfo>
+                <JoinInfo connection="#3">
+                  <Field field="Country/Region" />
+                  <Field field="Date" />
+                </JoinInfo>
+              </JoinFields>
+              <CartesianMode>Error</CartesianMode>
+              <OutputJoinOnly value="False" />
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Input_#1_Sum_Value" selected="True" rename="Confirmed" />
+                    <SelectField field="Input_#1_First_Lat" selected="False" />
+                    <SelectField field="Input_#1_First_Long" selected="False" />
+                    <SelectField field="Input_#2_Date" selected="False" rename="Input_#2_Date" />
+                    <SelectField field="Input_#2_Country/Region" selected="False" rename="Input_#2_Country/Region" />
+                    <SelectField field="Input_#2_Sum_Value" selected="True" rename="Dead" />
+                    <SelectField field="Input_#2_First_Lat" selected="False" rename="Input_#2_First_Lat" />
+                    <SelectField field="Input_#2_First_Long" selected="False" rename="Input_#2_First_Long" />
+                    <SelectField field="Input_#3_Date" selected="False" rename="Input_#3_Date" />
+                    <SelectField field="Input_#3_Country/Region" selected="False" rename="Input_#3_Country/Region" />
+                    <SelectField field="Input_#3_Sum_Value" selected="True" rename="Recovered" />
+                    <SelectField field="Input_#3_First_Lat" selected="False" rename="Input_#3_First_Lat" />
+                    <SelectField field="Input_#3_First_Long" selected="False" rename="Input_#3_First_Long" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+        </Node>
+        <Node ToolID="109">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="870" y="486" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_0de199b65e5c4e2890ffe02264bad866_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="159">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="961.0001" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Date</UpdateField_Name>
+              <CreateField_Name>Daily_Confirmed</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>[Confirmed]-[Row-1:Confirmed]</Expression>
+              <GroupByFields>
+                <Field field="Country/Region" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Confirmed]-[Row-1:Confirmed]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="162">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1050" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Date</UpdateField_Name>
+              <CreateField_Name>Daily_Deaths</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>[Dead]-[Row-1:Dead]</Expression>
+              <GroupByFields>
+                <Field field="Country/Region" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Dead]-[Row-1:Dead]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="163">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="1134" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name />
+              <CreateField_Name>Daily_Recovered</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>[Recovered]-[Row-1:Recovered]</Expression>
+              <GroupByFields>
+                <Field field="Country/Region" />
+              </GroupByFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Recovered]-[Row-1:Recovered]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="168">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1338" y="474" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\nasta\AppData\Local\Temp\Engine_11756_1df4ce9f597547618b39610b7f024a4b_\Engine_25040_3b005a2a68d5477b874b459ebb89f510_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="177">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="1218" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>Numeric</FieldType>
+              <Fields orderChanged="False">
+                <Field name="Confirmed" />
+                <Field name="Dead" selected="False" />
+                <Field name="Recovered" selected="False" />
+                <Field name="Input_#3_First_Lat" selected="False" />
+                <Field name="Input_#3_First_Long" selected="False" />
+                <Field name="Daily_Confirmed" selected="False" />
+                <Field name="Daily_Deaths" selected="False" />
+                <Field name="Daily_Recovered" selected="False" />
+                <Field name="*Unknown" selected="False" />
+              </Fields>
+              <NewFieldAddOn>Now_Sick</NewFieldAddOn>
+              <NewFieldAddOnPos>Prefix</NewFieldAddOnPos>
+              <CopyOutput value="True" />
+              <Expression>[_CurrentField_]-[Recovered]</Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[_CurrentField_]-[Recovered]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="134" Connection="Output9" />
+      <Destination ToolID="135" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="137" Connection="Output" />
+      <Destination ToolID="139" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="True" />
+      <Destination ToolID="137" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="True" />
+      <Destination ToolID="140" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="True" />
+      <Destination ToolID="134" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="True" />
+      <Destination ToolID="165" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="True" />
+      <Destination ToolID="170" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="True" />
+      <Destination ToolID="185" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="True" />
+      <Destination ToolID="141" Connection="Field Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="True" />
+      <Destination ToolID="145" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="True" />
+      <Destination ToolID="187" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="Output" />
+      <Destination ToolID="142" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="Interactive" />
+      <Destination ToolID="143" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="Reports" />
+      <Destination ToolID="144" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="Output" />
+      <Destination ToolID="150" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="Output" />
+      <Destination ToolID="176" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="146" Connection="Output" />
+      <Destination ToolID="152" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="148" Connection="Output" />
+      <Destination ToolID="152" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="150" Connection="True" />
+      <Destination ToolID="146" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="150" Connection="True" />
+      <Destination ToolID="148" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="150" Connection="False" />
+      <Destination ToolID="151" Connection="Right Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="152" Connection="Output" />
+      <Destination ToolID="151" Connection="Left Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Output" />
+      <Destination ToolID="153" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Interactive" />
+      <Destination ToolID="154" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="165" Connection="Output" />
+      <Destination ToolID="166" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="170" Connection="Output" />
+      <Destination ToolID="171" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="170" Connection="Output" />
+      <Destination ToolID="172" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="172" Connection="Output" />
+      <Destination ToolID="175" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="173" Connection="Output" />
+      <Destination ToolID="174" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="175" Connection="Output" />
+      <Destination ToolID="173" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="185" Connection="Output" />
+      <Destination ToolID="186" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="187" Connection="Output" />
+      <Destination ToolID="188" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="188" Connection="Output" />
+      <Destination ToolID="189" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="188" Connection="Interactive Viz" />
+      <Destination ToolID="190" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Output" />
+      <Destination ToolID="102" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Output" />
+      <Destination ToolID="114" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="102" Connection="Output" />
+      <Destination ToolID="103" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="103" Connection="True" />
+      <Destination ToolID="101" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="103" Connection="True" />
+      <Destination ToolID="104" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="104" Connection="Output" />
+      <Destination ToolID="113" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="104" Connection="Output" />
+      <Destination ToolID="106" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="106" Connection="Output" />
+      <Destination ToolID="133" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="123" Connection="Output" />
+      <Destination ToolID="133" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="131" Connection="Output" />
+      <Destination ToolID="133" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="117" Connection="Output" />
+      <Destination ToolID="119" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="117" Connection="Output" />
+      <Destination ToolID="116" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="119" Connection="Output" />
+      <Destination ToolID="120" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="True" />
+      <Destination ToolID="118" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="True" />
+      <Destination ToolID="121" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="115" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="123" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="124" Connection="Output" />
+      <Destination ToolID="125" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="124" Connection="Output" />
+      <Destination ToolID="127" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="125" Connection="Output" />
+      <Destination ToolID="126" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="126" Connection="True" />
+      <Destination ToolID="128" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="126" Connection="True" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="132" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="131" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="133" Connection="Output" />
+      <Destination ToolID="109" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="133" Connection="Output" />
+      <Destination ToolID="159" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="159" Connection="Output" />
+      <Destination ToolID="162" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="162" Connection="Output" />
+      <Destination ToolID="163" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="163" Connection="Output" />
+      <Destination ToolID="177" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Output" />
+      <Destination ToolID="168" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Output" />
+      <Destination ToolID="138" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Workflow_Part2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
